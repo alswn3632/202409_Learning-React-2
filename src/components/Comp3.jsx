@@ -6,8 +6,8 @@ const Comp3 = () => {
     // 다른 컴포넌트로 데이터를 넘길 때는 props를 사용하는데, 
     // path를 사용하여 데이터를 넘길 수도 있다.
     // ★ 나중에 spring 서버에 갈 때도 같은 작업을 함 ★
-    // 1. path variable : /comp3/12421...(넘버링)
-    // 2. queryString : /comp3?id=12&name=12...
+    // 1. path variable : /comp3/12421...(넘버링) 보통 비동기 방식으로 보낼 때 사용
+    // 2. queryString : /comp3?id=12&name=12... 동기 방식을 보낼 때 사용
 
     const [informations, setInformations] = useState({id:'',pw:''})
     const {id, pw} = informations;
@@ -43,6 +43,7 @@ const Comp3 = () => {
             <input type="text" name='id' value={id} onChange={inputValue}/>
             <input type="text" name='pw' value={pw} onChange={inputValue}/>
             <Link to={{pathname:`/param3/${id}/${pw}`}}>id/pw 전송</Link>            
+            {/* to 뒤에 바로 백틱 안됨. {{}}안에서 `` */}
         </div>
     );
 };

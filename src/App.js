@@ -23,6 +23,8 @@ function App() {
             <Route path='/param/:id/:name' element={<Param1 />}/>
             <Route path='/param' element={<Param2 />}/>
             <Route path='/param3/:id/:pw' element={<Param3 />}/>
+            {/* 변수가 두개인 param이라는 경로가 이미 존재하기 때문에, param3으로 변경해줘야함 
+            뒤에 쓴 :id, :name, :pw는 사용자가 부여한것이지 실제로 인지하며 작동하는 것은 아니기 때문에. */}
           </Routes>
         <Footer />
       </BrowserRouter>
