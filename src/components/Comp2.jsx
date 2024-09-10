@@ -4,6 +4,7 @@ import './comp.css'
 import Input from './Input';
 import Color from './Color';
 import Input2 from './Input2';
+import Counter2 from './Counter2';
 
 const Comp2 = () => {
 
@@ -14,6 +15,8 @@ const Comp2 = () => {
     return (
         <div className='comp2 comp'>
             <div>COMP THE 2ST!!!</div>     
+            <Counter2 />
+            <hr />
             <Counter /> 
             <hr />
             <Input />
